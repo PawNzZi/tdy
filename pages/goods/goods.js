@@ -1,5 +1,8 @@
 // pages/goods/goods.js
-const network = require("../../utils/network.js")
+const network = require("../../utils/network.js");
+const Bmob = require("../../utils/Bmob-2.2.2.min.js");
+const query = Bmob.Query('appinfo');
+
 Page({
 
   /**
@@ -33,7 +36,17 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let that = this ;
+    query.get('kcC8000P').then(res => {
+      console.log(res) ;
+      that.setData({
+        tip:res.tip,
+        btn_text:res.btn_text,
+        copy_text: res.copy_text
+      })
+    }).catch(err => {
+      console.log(err)
+    })
   },
 
   /**
@@ -72,6 +85,7 @@ Page({
   },
   copyCode:function(){
     let that= this ;
+    let copy_text = this.data.copy_text;
     var apikey = 'royfwmeng' ;
     var itemid = this.data.itemid;
     var pid = 'mm_96548959_592600465_109118100473';
@@ -94,7 +108,7 @@ Page({
               wx.getClipboardData({
                 success: function (res) {
                   wx.showToast({
-                    title: '领取成功'
+                    title: copy_text
                   })
                 }
               })

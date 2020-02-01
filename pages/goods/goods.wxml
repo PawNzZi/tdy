@@ -21,7 +21,7 @@
     <text class="sales">已售{{goodInfo.itemsale}}件</text>
   </view> 
   <view class="tip-view">
-    <text class="tip-text">{{goodInfo.tip}}</text>
+    <text class="tip-text">{{tip}}</text>
   </view>
    <view  class="divider">
       <i-divider color="#e9eaec" lineColor="#e9eaec">淘·都匀</i-divider>
@@ -29,7 +29,7 @@
   <image class="cover" src="{{'http://img.haodanku.com/'+goodInfo.itempic_copy}}"></image>
   <!--底部按钮-->
   <view class="copy-view" bindtap='copyCode'>
-    <text class="copy-code">点赞</text>
+    <text class="copy-code">{{btn_text}}</text>
   </view>
 </view>
  

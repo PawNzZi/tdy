@@ -67,7 +67,7 @@ Page({
     this.everyday();
 },
   onLoad: function () {
-    this.getCurrentTime();
+    this.getBannerGoods();
     //热门请求
     this.getHotGoods();
     //整点快抢
@@ -82,7 +82,7 @@ Page({
   everyday:function(){
     let that = this ;
     var data = {};
-    network.requestGet('/column/apikey/royfwmeng/type/1/back/10/min_id/1',{
+    network.requestGet('/column/apikey/royfwmeng/type/1/back/20/min_id/1',{
       success(res){
         that.setData({
           array:res.data
@@ -97,7 +97,7 @@ Page({
     let that = this ;
     var data = {};
     let sh_min_id = this.data.sh_min_id;
-    network.requestGet("/get_keyword_items/apikey/royfwmeng/keyword/" + "抽纸" + "/back/10/min_id/" + sh_min_id, {
+    network.requestGet("/get_keyword_items/apikey/royfwmeng/keyword/" + "抽纸" + "/back/5/min_id/" + sh_min_id, {
       success(res) {
         console.log(res)
         let array = res.data;
@@ -132,10 +132,10 @@ Page({
   /**
    * banner接口
    */
-  getBannerGoods: function (time) {
+  getBannerGoods: function () {
     let that = this;
     var data = {};
-    network.requestGet('/fastbuy/apikey/royfwmeng/hour_type/'+time+'/min_id/1', {
+    network.requestGet('/column/apikey/royfwmeng/type/11/back/5/min_id/1', {
       success(res) {
         console.log(res)
         that.setData({
@@ -147,23 +147,23 @@ Page({
   /**
    * 
    */
-  getCurrentTime:function(){
-    var myDate = new Date();
-    var time = myDate.getHours();
-    console.log(time);
-    let key ;
-    if (time>0 && time <10){
-      key = 7;
-    } else if (time >= 10 && time < 12){
-      key = 8;
-    } else if (time >= 12 && time < 15){
-      key = 9;
-    } else if (time >= 15 && time < 20) {
-      key = 10;
-    }else{
-      key = 12;
-    }
-    //banner
-    this.getBannerGoods(key);
-  }
+  // getCurrentTime:function(){
+  //   var myDate = new Date();
+  //   var time = myDate.getHours();
+  //   console.log(time);
+  //   let key ;
+  //   if (time>0 && time <10){
+  //     key = 7;
+  //   } else if (time >= 10 && time < 12){
+  //     key = 8;
+  //   } else if (time >= 12 && time < 15){
+  //     key = 9;
+  //   } else if (time >= 15 && time < 20) {
+  //     key = 10;
+  //   }else{
+  //     key = 12;
+  //   }
+  //   //banner
+  //   this.getBannerGoods(1);
+  // }
 })
