@@ -1,0 +1,130 @@
+/**index.wxss**/
+/* pages/search/search.wxss */
+.swiper{
+  width: 100%;
+  height: 400rpx;
+}
+.search-input{
+  width: 100%;
+  height: 110rpx;
+  padding: 25rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  background: #fff;
+}
+.contains{
+  display: flex;
+  flex-direction: row;
+  background: #f8f8f9;
+  width: 100%;
+  align-items: center;
+  border-radius: 10rpx;
+}
+.icon-search{
+  margin-left: 20rpx;
+  margin-bottom: 7rpx;
+}
+.input{
+  margin-left: 20rpx;
+  color:#000;
+  font-size: 28rpx;
+  width: 80%;
+  height: 70rpx;
+}
+.top-view{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.kongbai-view{
+  width: 100%;
+  height: 110rpx;
+}
+.slide-image{
+  width: 100%;
+  height: 400rpx;
+}
+
+.hot-search{
+  display: flex;
+  flex-direction: column;
+  margin-top: 30rpx;
+}
+.right-enter{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 40rpx;
+}
+.right-view{
+  display: inline-flex;
+  flex-direction: row;
+}
+.enter-text{
+  font-size: 22rpx;
+  color: #80848f;
+}
+.right-icon{
+  height: 70rpx;
+}
+
+.hot-title{
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-left: 40rpx;
+  margin-bottom: 30rpx;
+}
+.hot-view{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.kongbai-hot{
+  width: 100%;
+  height: 165rpx;
+}
+/* .hot-item{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150rpx;
+}
+.item-hot-img{
+  width: 100rpx;
+  height: 100rpx;
+  background: #000;
+}
+.item-title{
+  color:#bbbec4;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  width: 150rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item-bottom{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150rpx;
+}
+.item-bottom-oldprice{
+  color:#bbbec4;
+  font-size: 24rpx;
+  text-decoration: line-through;
+}
+.item-bottom-price{
+  color:red;
+  font-size: 24rpx;
+  
+} */
+.divider{
+  margin-left: 60rpx;
+  margin-right: 60rpx;
+  height: 48rpx;
+}

@@ -1,0 +1,13 @@
+{
+
+"navigationBarBackgroundColor": "#ff9900",
+"navigationBarTitleText": "主页",
+"navigationBarTextStyle": "white",
+ "usingComponents": {
+  "i-icon": "../../dist/icon/index",
+  "i-divider": "../../dist/divider/index",
+  "i-tag": "../../dist/tag/index",
+  "component-item": "../../lgui/item/item",
+  "component-homebox": "../../lgui/homebox/homebox"
+}
+}

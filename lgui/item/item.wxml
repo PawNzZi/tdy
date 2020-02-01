@@ -1,0 +1,26 @@
+<!--item.wxml-->
+  <view class="item-view" >
+      <image class="item-img" src="{{url}}"></image>
+      <view class="item-right">
+          <view class="item-right-top-top">
+            <!-- <view wx:if="{{type == B}}">
+              <i-tag class="i-tags" color="red" >天猫</i-tag>
+            </view>
+            <view wx:else>
+               <i-tag class="i-tags" color="yellow">淘宝</i-tag>
+            </view> -->
+           <!-- <i-tag class="i-tags" color="red"  wx:if="{{type === C}}">天猫</i-tag> -->
+           <!-- <i-tag class="i-tags" color="yellow">{{type}}</i-tag> -->
+            <text class="item-title">{{title}}</text>
+          </view>
+          <view class="item-right-top-middle">
+            <i-tag  type="border" color="yellow">券 {{couponprice}}元</i-tag>
+            <text class="item-sales">已{{sales}} 件</text>
+          </view>
+          <view class="item-right-top">
+            <text class="item-price-text"></text>
+            <text class="item-price">券后价 {{price}}</text>
+            <text class="item-oldprice">原价 {{oldprice}}</text>
+          </view>
+      </view>
+  </view>

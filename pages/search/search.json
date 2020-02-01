@@ -1,0 +1,10 @@
+{
+  "navigationBarBackgroundColor": "#ff9900",
+  "navigationBarTitleText": "搜索",
+  "navigationBarTextStyle": "white", 
+  "onReachBottomDistance": 20,
+  "usingComponents": { 
+      "component-item":"../../lgui/item/item",
+      "i-icon": "../../dist/icon/index"
+  }
+}

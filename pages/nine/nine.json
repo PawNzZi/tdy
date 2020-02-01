@@ -1,0 +1,12 @@
+{
+  "navigationBarBackgroundColor": "#ff9900",
+  "navigationBarTitleText": "9.9",
+  "navigationBarTextStyle": "white",
+  "onReachBottomDistance": 20,
+  "usingComponents": {
+      "i-tabs": "../../dist/tabs/index",
+      "i-tab": "../../dist/tab/index",
+      "i-tag": "../../dist/tag/index",
+      "component-item": "../../lgui/item/item"
+  }
+}

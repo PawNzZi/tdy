@@ -1,0 +1,40 @@
+<!--pages/category/category.wxml--> 
+<view>
+  <view class="top-view">
+    <i-tabs current="{{ current_scroll }}" color="#ff9900" scroll bindchange="handleChangeScroll">
+      <i-tab key="{{tabInfo[0].key}}" title="女装"></i-tab>
+      <i-tab key="{{tabInfo[1].key}}" title="内衣"></i-tab>
+      <i-tab key="{{tabInfo[2].key}}" title="美妆"></i-tab>
+      <i-tab key="{{tabInfo[3].key}}" title="美食"></i-tab>
+      <i-tab key="{{tabInfo[4].key}}" title="男装"></i-tab>
+      <i-tab key="{{tabInfo[5].key}}" title="鞋品"></i-tab>
+      <i-tab key="{{tabInfo[6].key}}" title="宠物"></i-tab>
+    </i-tabs> 
+  </view>
+ 
+<view class="kongbai-view"></view>
+  <view wx:for="{{array}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
+   <component-item title="{{item.itemtitle}}" url="{{item.itempic}}" type="{{item.activity_type}}" couponprice="{{item.couponmoney}}" sales="{{item.itemsale}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-item>
+  </view>
+  <!-- <block wx:for="{{array}}">
+  <view class="item-view" bindtap='toGoodsDetail'>
+      <image class="item-img" src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
+      <view class="item-right">
+          <view class="item-right-top-top">
+            <i-tag class="i-tags" color="red">天猫</i-tag>
+            <text class="item-title">{{item.title}}</text>
+          </view>
+          <view class="item-right-top-middle">
+            <i-tag  type="border" color="yellow">券 10</i-tag>
+            <text class="item-sales">已售 100000件</text>
+          </view>
+          <view class="item-right-top">
+            <text class="item-price-text">券后价：</text>
+            <text class="item-price">19.80</text>
+            <text class="item-oldprice">19.80</text>
+          </view>
+      </view>
+  </view>
+  </block> -->
+
+</view>

@@ -1,0 +1,12 @@
+<!--homebox.wxml-->
+<view class="box-contains">
+    <view class="hot-item">
+        <image class="item-hot-img" src='{{url}}'></image>
+        <text class="item-title">{{title}}</text>
+        <view class="item-bottom">
+          <text class="item-bottom-oldprice">{{oldprice}}</text>
+          <text class="item-bottom-price">{{price}}</text>
+        </view>
+      </view>
+</view>
+  

@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#ff9900",
+  "navigationBarTitleText": "分类",
+  "navigationBarTextStyle": "white",
+  "onReachBottomDistance": 20,
+  "usingComponents": {
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "component-item": "../../lgui/item/item"
+  }
+}

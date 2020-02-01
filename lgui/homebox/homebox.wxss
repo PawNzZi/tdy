@@ -1,0 +1,42 @@
+/* homebox.wxss */
+.box-contains{
+  display: flex;
+  flex-direction: row;
+}
+.hot-item{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150rpx;
+}
+.item-hot-img{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 10rpx;
+}
+.item-title{
+  color:#bbbec4;
+  font-size: 22rpx;
+  margin-top: 10rpx;
+  width: 150rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item-bottom{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150rpx;
+}
+.item-bottom-oldprice{
+  color:#bbbec4;
+  font-size: 20rpx;
+  text-decoration: line-through;
+}
+.item-bottom-price{
+  color:red;
+  font-size: 20rpx;
+  
+}

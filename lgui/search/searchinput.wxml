@@ -1,0 +1,7 @@
+<!--searchinput.wxml-->
+<view class="search-input">
+  <view class="contains">
+    <i-icon i-class="icon-search" type="search" size='22' />
+    <input class="input" placeholder="搜索商品" placeholder-style="color:#80848f" confirm-type="search" bindconfirm="searchGoods" bindinput='getInputText'></input>
+  </view>   
+</view>

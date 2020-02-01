@@ -1,0 +1,16 @@
+<!--pages/search/search.wxml-->
+<view>
+  <view class="top-view">
+    <view class="search-input">
+    <view class="contains">
+    <i-icon i-class="icon-search" type="search" size='22' color='#80848f' />
+    <input class="input" placeholder="搜索商品" placeholder-style="color:#80848f" confirm-type="search" bindconfirm="searchGoods" bindinput='getInputText'></input>
+  </view>   
+</view> 
+  </view>
+  <view class="kongbai-view"></view>
+  <view wx:for="{{array}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
+   <component-item title="{{item.itemtitle}}" url="{{item.itempic}}" type="{{item.activity_type}}" couponprice="{{item.couponmoney}}" sales="{{item.itemsale}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-item>
+  </view>
+</view>
+

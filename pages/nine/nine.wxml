@@ -1,0 +1,35 @@
+<!--pages/nine/nine.wxml-->
+<view>
+  <view class="top-view">
+     <i-tabs current="{{ current }}" color="#ff9900" bindchange="handleChange">
+    <i-tab key="tab1" title="9.9元"></i-tab>
+    <i-tab key="tab2" title="30元"></i-tab>
+  </i-tabs>
+  </view>
+  <view class="kongbai-view"></view>
+    <view wx:for="{{nArray}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
+  <component-item title="{{item.itemtitle}}" url="{{item.itempic}}" type="{{item.activity_type}}" couponprice="{{item.couponmoney}}" sales="{{item.itemsale}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-item>
+  </view>
+  <!-- <block wx:for="{{array}}"> 
+  <view class="item-view" bindtap='toGoodsDetail' >
+      <image class="item-img" src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
+      <view class="item-right">
+          <view class="item-right-top-top">
+            <i-tag class="i-tags" color="red">天猫</i-tag>
+            <text class="item-title">{{item.title}}</text>
+          </view>
+          <view class="item-right-top-middle">
+            <i-tag  type="border" color="yellow">券 10</i-tag>
+            <text class="item-sales">已售 100000件</text>
+          </view>
+          <view class="item-right-top">
+            <text class="item-price-text">券后价：</text>
+            <text class="item-price">19.80</text>
+            <text class="item-oldprice">19.80</text>
+          </view>
+      </view>
+  </view>
+  </block> -->
+
+</view>
+
