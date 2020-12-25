@@ -1,0 +1,51 @@
+<!--pages/index/pdd/pdd.wxml-->
+<view>
+	<view class="top-view">
+		<i-tabs current="{{ current_scroll }}" color="#ff9900" scroll bindchange="handleChangeScroll">
+			<i-tab key="{{tabInfo[0].key}}" title="女装"></i-tab>
+			<i-tab key="{{tabInfo[1].key}}" title="男装"></i-tab>
+			<i-tab key="{{tabInfo[2].key}}" title="美妆"></i-tab>
+			<i-tab key="{{tabInfo[3].key}}" title="母婴"></i-tab>
+			<i-tab key="{{tabInfo[4].key}}" title="箱包"></i-tab>
+			<i-tab key="{{tabInfo[5].key}}" title="零食"></i-tab>
+			<i-tab key="{{tabInfo[6].key}}" title="内衣裤袜"></i-tab>
+			<i-tab key="{{tabInfo[7].key}}" title="宠物"></i-tab>
+		</i-tabs>
+	</view>
+
+	<view class="kongbai-view"></view>
+	<!-- banner 开始 -->
+	<view>
+		<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff9900">
+			<block wx:for="{{bannerLists}}">
+				<swiper-item>
+					<image src="{{item.goods_image_url}}" class="slide-image" bindtap='toGoodsDetail' data-itemid='{{item.goods_id}}' />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- banner 结束 -->
+	<!-- 推荐栏开始 -->
+	<view class="tj-view">
+		<view class="tj-item">
+			<image class="tj-img" src="../../../images/3.png"></image>
+			<text style="font-size:24rpx;color:#8b8b8b">今日爆款</text>
+		</view>
+		<view class="tj-item">
+			<image class="tj-img" src="../../../images/2.png"></image>
+			<text style="font-size:24rpx;color:#8b8b8b">员工内购</text>
+		</view>
+		<view class="tj-item">
+			<image class="tj-img" src="../../../images/1.png"></image>
+			<text style="font-size:24rpx;color:#8b8b8b">品牌清仓</text>
+		</view>
+		<view class="tj-item">
+			<image class="tj-img" src="../../../images/4.png"></image>
+			<text style="font-size:24rpx;color:#8b8b8b">限时秒杀</text>
+		</view>
+	</view>
+	<!-- 推荐栏结束 -->
+	<view wx:for="{{array}}" bindtap='toGoodsDetail' data-itemid='{{item.goods_sign}}'>
+		<component-item title="{{item.goods_name}}" url="{{item.goods_thumbnail_url}}" type="{{item.activity_type}}" couponprice="{{item.coupon_discount/100}}" sales="{{item.sales_tip}}" price="{{item.min_group_price/100}}" oldprice="{{(item.coupon_discount + item.min_group_price)/100}}"></component-item>
+	</view>
+</view>

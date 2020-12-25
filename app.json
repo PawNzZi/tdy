@@ -5,7 +5,9 @@
     "pages/category/category",
     "pages/nine/nine",
     "pages/goods/goods",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/waimai/waimai",
+    "pages/index/pdd/pdd"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -37,6 +39,13 @@
         "iconPath": "images/category.png",
         "selectedIconPath": "images/category_sel.png"
       }
+      ,
+      {
+        "pagePath": "pages/waimai/waimai",
+        "text": "外卖",
+        "iconPath": "images/waimai.png",
+        "selectedIconPath": "images/waimai_sel.png"
+      }
     ]
   },
   "networkTimeout": {
@@ -45,5 +54,11 @@
     "uploadFile": 30000,
     "downloadFile": 30000
   },
+  "navigateToMiniProgramAppIdList": [
+    "wxece3a9a4c82f58c9",
+    "wxde8ac0a21135c07d",
+    "wxd98a20e429ce834b",
+    "wx32540bd863b27570"
+  ],
   "sitemapLocation": "sitemap.json"
 }

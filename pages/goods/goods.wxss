@@ -53,7 +53,7 @@
 }
 .tip-text{
   font-size: 20rpx;
-  color: #bbbec4;
+  color: #8b8b8b;
   
 }
 .price-view{
@@ -66,12 +66,12 @@
 }
 .current-price{
   font-size: 26rpx;
-  color: #bbbec4;
+  color: #8b8b8b;
   text-decoration: line-through;
 }
 .sales{
   font-size: 26rpx;
-  color: #bbbec4;
+  color: #8b8b8b;
 }
 .divider{
   margin-left: 60rpx;
@@ -97,5 +97,5 @@
   width: 100%;
   margin-bottom: 110rpx;
   margin-top: 20rpx;
-  height: 1200rpx;
+  /* height: 1200rpx; */
 }

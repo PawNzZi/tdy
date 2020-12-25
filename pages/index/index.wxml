@@ -1,66 +1,64 @@
 <!--index.wxml-->
 <view>
-  <view class="top-view">
-      <view class="search-input">
-  <view class="contains">
-    <i-icon i-class="icon-search" type="search" size='22' color='#80848f'/>
-    <input class="input" placeholder="搜索" placeholder-style="color:#80848f" confirm-type="search" bindconfirm="searchGoods" bindinput='getInputText'></input>
-  </view>   
-</view>
-  </view>
-  <view class="kongbai-view"></view>
-  <!-- <view class="search-input">
-      <i-icon i-class="icon-search" type="search" size='22' />
-      <input class="input" placeholder="搜索商品" placeholder-style="color:#80848f"></input>
-  </view> -->
-  <swiper class="swiper" indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff9900"> 
-    <block wx:for="{{bannerLists}}">
-      <swiper-item>
-        <image src="{{item.itempic}}" class="slide-image" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'/>
-      </swiper-item>
-    </block>
-  </swiper>
-  <!-- 热搜 -->
-  <view class="hot-search">
-    <view class="right-enter">
-      <text class="hot-title">热门</text>
-      <view class="right-view" bindtap='changeOne' data-type="0">
-          <text class="enter-text">换一换</text>
-          <i-icon i-class="right-icon" type="refresh" size='16' color='#80848f'/>
-      </view>
-    </view>
-    <view class="kongbai-hot" wx:if="{{hotLists.length == 0}}"></view>
-    <view class="hot-view" wx:else>
-      <view wx:for="{{hotLists}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
-        <component-homebox title="{{item.itemtitle}}" url="{{item.itempic}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-homebox>
-      </view>
-    </view>
-  </view>
-  <!-- 女装 -->
-   <view class="hot-search">
-    <view class="right-enter">
-      <text class="hot-title">生活必备</text>
-      <view class="right-view" bindtap='changeOne' data-type="1">
-          <text class="enter-text">换一换</text>
-          <i-icon i-class="right-icon" type="refresh" size='16' color='#80848f'/>
-      </view>
-    </view>
-    <view class="kongbai-hot" wx:if="{{fastBuyLists.length == 0}}"></view>
-    <view class="hot-view" wx:else>
-      <view wx:for="{{fastBuyLists}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
-        <component-homebox title="{{item.itemtitle}}" url="{{item.itempic}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-homebox>
-      </view>
-    </view>
-  </view>
-  <view  class="divider">
-      <i-divider color="#e9eaec" lineColor="#e9eaec">今日上新</i-divider>
-  </view>
+	
+		<view class="search-input">
+			<view class="contains">
+				<i-icon i-class="icon-search" type="search" size='22' color='#80848f' />
+				<input class="input" placeholder="搜索" placeholder-style="color:#80848f" confirm-type="search" bindconfirm="searchGoods" bindinput='getInputText'></input>
+			</view>
 
-  <view wx:for="{{array}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
-   <component-item title="{{item.itemtitle}}" url="{{item.itempic}}" type="{{item.activity_type}}" couponprice="{{item.couponmoney}}" sales="{{item.itemsale}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-item>
-  </view>
-  <!-- <block wx:for="{{array}}">
+	</view>
+	<view class="kongbai-view"></view>
+	<!-- <view class="swiper-view"> -->
+	<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff9900">
+		<block wx:for="{{bannerLists}}">
+			<swiper-item>
+				<image src="{{item.itempic}}" class="slide-image" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}' />
+			</swiper-item>
+		</block>
+	</swiper>
+	<!-- </view> -->
+
+	<!-- 热搜 -->
+	<view class="hot-search">
+		<view class="right-enter">
+			<text class="hot-title">热门</text>
+			<view class="right-view" bindtap='changeOne' data-type="0">
+				<text class="enter-text">换一换</text>
+				<i-icon i-class="right-icon" type="refresh" size='16' color='#80848f' />
+			</view>
+		</view>
+		<view class="kongbai-hot" wx:if="{{hotLists.length == 0}}"></view>
+		<view class="hot-view" wx:else>
+			<view wx:for="{{hotLists}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
+				<component-homebox title="{{item.itemtitle}}" url="{{item.itempic}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-homebox>
+			</view>
+		</view>
+	</view>
+	<!-- 女装 -->
+	<view class="hot-search">
+		<view class="right-enter">
+			<text class="hot-title">生活必备</text>
+			<view class="right-view" bindtap='changeOne' data-type="1">
+				<text class="enter-text">换一换</text>
+				<i-icon i-class="right-icon" type="refresh" size='16' color='#80848f' />
+			</view>
+		</view>
+		<view class="kongbai-hot" wx:if="{{fastBuyLists.length == 0}}"></view>
+		<view class="hot-view" wx:else>
+			<view wx:for="{{fastBuyLists}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
+				<component-homebox title="{{item.itemtitle}}" url="{{item.itempic}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-homebox>
+			</view>
+		</view>
+	</view>
+	<view class="divider">
+		<i-divider color="#e9eaec" lineColor="#e9eaec">今日上新</i-divider>
+	</view>
+
+	<view wx:for="{{array}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
+		<component-item title="{{item.itemtitle}}" url="{{item.itempic}}" type="{{item.activity_type}}" couponprice="{{item.couponmoney}}" sales="{{item.itemsale}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-item>
+	</view>
+	<!-- <block wx:for="{{array}}">
   <view class="item-view" bindtap='toGoodsDetail'>
       <image class="item-img" src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
       <view class="item-right">

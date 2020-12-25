@@ -2,6 +2,8 @@
 .box-contains{
   display: flex;
   flex-direction: row;
+  background: #f8f8f9;
+  padding: 10rpx;
 }
 .hot-item{
   display: inline-flex;
@@ -15,7 +17,7 @@
   border-radius: 10rpx;
 }
 .item-title{
-  color:#bbbec4;
+  color:#8b8b8b;
   font-size: 22rpx;
   margin-top: 10rpx;
   width: 150rpx;
@@ -31,7 +33,7 @@
   width: 150rpx;
 }
 .item-bottom-oldprice{
-  color:#bbbec4;
+  color:#8b8b8b;
   font-size: 20rpx;
   text-decoration: line-through;
 }

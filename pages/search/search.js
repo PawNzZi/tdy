@@ -45,7 +45,9 @@ Page({
     this.setData({
       key:key
     })
-
+    if (key) {
+      this.searchGoodsForKey(key)
+    }
   },
 
   /**
@@ -59,19 +61,19 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    let key = this.data.key ;
-    if (key) {
-      this.searchGoodsForKey(key)
-    }
+    // let key = this.data.key ;
+    // if (key) {
+    //   this.searchGoodsForKey(key)
+    // }
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-    this.setData({
-      min_id:1
-    })
+    // this.setData({
+      // min_id:1
+    // })
   },
 
   /**
@@ -98,13 +100,6 @@ Page({
     let key = this.data.key;
     this.searchGoodsForKey(key)
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   /**
    * 查询商品
    */
@@ -117,7 +112,7 @@ Page({
     var data = {
     }
     let min_id = this.data.min_id ;
-    network.requestGet("/get_keyword_items/apikey/royfwmeng/keyword/" + key + "/back/10/min_id/" + min_id,{
+    network.requestGet("/supersearch/apikey/royfwmeng/keyword/" + key + "/back/10/min_id/" + min_id + "/sort/2",{
       success(res){
         let array = that.data.array.concat(res.data);
         that.setData({

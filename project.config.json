@@ -55,9 +55,9 @@
 			"current": 2,
 			"list": [
 				{
-					"id": -1,
-					"name": "ddd",
-					"pathName": "pages/goods/goods",
+					"id": 0,
+					"name": "pdd",
+					"pathName": "pages/index/pdd/pdd",
 					"query": "",
 					"scene": null
 				},
@@ -86,6 +86,14 @@
 					"id": -1,
 					"name": "pages/search/search",
 					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/waimai/waimai",
+					"pathName": "pages/waimai/waimai",
+					"query": "",
 					"scene": null
 				}
 			]

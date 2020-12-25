@@ -38,6 +38,7 @@ Page({
     wx.navigateTo({
       url: "/pages/search/search?key="+key,
     })
+    // this.setData({key:''})
   }
 ,
   changeOne:function(e){
@@ -166,4 +167,10 @@ Page({
   //   //banner
   //   this.getBannerGoods(1);
   // }
+    /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  },
 })

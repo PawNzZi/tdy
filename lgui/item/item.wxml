@@ -15,7 +15,7 @@
           </view>
           <view class="item-right-top-middle">
             <i-tag  type="border" color="yellow">券 {{couponprice}}元</i-tag>
-            <text class="item-sales">已{{sales}} 件</text>
+            <text class="item-sales">已售{{sales}} 件</text>
           </view>
           <view class="item-right-top">
             <text class="item-price-text"></text>

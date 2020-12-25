@@ -1,0 +1,39 @@
+<!--pages/waimai/waimai.wxml-->
+<view>
+	<view class="tabar" style="margin-bottom:30rpx">
+		<block wx:for="{{tabsArray}}">
+			<view class="item" bindtap="changeTabars" data-currentBar="{{item.index}}">
+				<image class="tabar-item" src="{{item.icon}}"></image>
+				<view class="line" wx:if="{{currentBar == item.index}}"></view>
+			</view>
+		</block>
+		<!-- <view class="item" bindtap="changeTabars" data-currentBar="0">
+			<image class="tabar-item" src="../../images/all.png"></image>
+			<view class="line" wx:if="{{currentBar == 0}}"></view>
+		</view>
+		<view class="item" bindtap="changeTabars" data-currentBar="1">
+			<image class="tabar-item" src="../../images/meituan.png"></image>
+			<view class="line" wx:if="{{currentBar == 1}}"></view>
+		</view>
+		<view class="item" bindtap="changeTabars" data-currentBar="2">
+			<image class="tabar-item" src="../../images/ele.png"></image>
+			<view class="line" wx:if="{{currentBar == 2}}"></view>
+		</view> -->
+	</view>
+	<view>
+		<block wx:for="{{array}}">
+			<view class="array-item" bindtap="toGetCounpon" data-index="{{index}}">
+				<view class="head">
+					<view>
+						<image class="icon" src="{{item.icon}}"></image>
+						<text class="top-t0">{{item.name}}</text>
+					</view>
+					<view class="top-t1">{{item.tag}}</view>
+					<view class="top-t2">免费领取</view>
+				</view>
+				<image class="img" src="{{item.bannerPic}}"></image>
+			</view>
+		</block>
+	</view>
+	<view style="height:20rpx"></view>
+</view>

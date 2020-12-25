@@ -1,9 +1,7 @@
 <!--pages/goods/goods.wxml-->
-<view>
+<!-- <view wx:if="{{mall == 'tb'}}">
   <image src="{{goodInfo.itempic}}" class="slide-image" width="355" height="150"/>
   <view class="title-view">
-    <!-- <i-tag class="i-tags" color="red" wx:if="{{goodInfo.shoptype === B}}">天猫</i-tag>
-    <i-tag class="i-tags" color="yellow" wx:else>淘宝</i-tag> -->
     <text class="good-title">{{goodInfo.itemtitle}}</text>
   </view>
   <view class="title-view">
@@ -27,8 +25,41 @@
       <i-divider color="#e9eaec" lineColor="#e9eaec">淘·都匀</i-divider>
   </view>
   <image class="cover" src="{{'http://img.haodanku.com/'+goodInfo.itempic_copy}}"></image>
-  <!--底部按钮-->
+
   <view class="copy-view" bindtap='copyCode'>
+    <text class="copy-code">{{btn_text}}</text>
+  </view>
+</view> -->
+<view>
+  <image src="{{goodInfo.goods_thumbnail_url}}" class="slide-image" width="355" height="150"/>
+  <view class="title-view">
+    <text class="good-title">{{goodInfo.goods_name}}</text>
+  </view>
+  <view class="title-view">
+    <view class="title-left">
+      <i-tag name="标签一" type="border" color="yellow">券 {{goodInfo.coupon_discount/100}}元</i-tag>
+      <text class="good-price">{{goodInfo.min_group_price/100}}元</text>
+    </view>
+    <view class="title-left">
+      <text class="shopname">店铺名:{{goodInfo.mall_name}}</text>
+    </view>
+  </view>
+  <view class="price-view">
+    <text class="current-price">原价 {{(goodInfo.coupon_discount + goodInfo.min_group_price)/100}}元</text>
+    <text class="sales">已售{{goodInfo.sales_tip}}件</text>
+  </view> 
+  <view class="tip-view">
+    <text class="tip-text">{{tip}}</text>
+  </view>
+   <view  class="divider">
+      <i-divider color="#e9eaec" lineColor="#e9eaec">淘·都匀</i-divider>
+  </view>
+  <block wx:for="{{goodInfo.goods_gallery_urls}}">
+    <image class="cover" src="{{item}}"></image>
+  </block>
+  
+  <!--底部按钮-->
+  <view class="copy-view" bindtap='toPdd'>
     <text class="copy-code">{{btn_text}}</text>
   </view>
 </view>

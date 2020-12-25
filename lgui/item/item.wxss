@@ -43,7 +43,7 @@
 }
 .item-title{
   font-size: 24rpx;
-  color: #80848f;
+  color: #8b8b8b;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -51,7 +51,7 @@
 }
 .item-price-text{
   font-size: 24rpx;
-  color: #bbbec4;
+  color: #8b8b8b;
 }
 .item-price{
   font-size: 28rpx;
@@ -60,13 +60,13 @@
 }
 .item-oldprice{
   font-size: 22rpx;
-  color: #bbbec4;
+  color: #8b8b8b;
   margin-left: 40rpx;
   text-decoration: line-through;
 }
 .item-sales{
   font-size: 22rpx;
-  color: #bbbec4;
+  color: #8b8b8b;
 }
 .i-tags{
 
