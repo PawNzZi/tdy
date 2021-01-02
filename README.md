@@ -1,39 +1,34 @@
 # tdy
 
 #### 介绍
-{**以下是码云平台说明，您可以替换此简介**
-码云是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN）。专为开发者提供稳定、高效、安全的云端软件开发协作平台
-无论是个人、团队、或是企业，都能够用码云实现代码托管、项目管理、协作开发。企业项目请看 [https://gitee.com/enterprises](https://gitee.com/enterprises)}
+淘客小程序+外卖CPS，无后端版，简单配置，开箱即用。
+原生小程序开发，目前淘客只有淘宝，后期会加上拼多多和京东；
+外卖有饿了么+美团
 
-#### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+[![小程序参考](https://image.lingyikz.cn/gh_61880654aae9_258.jpg "小程序参考")](https://image.lingyikz.cn/gh_61880654aae9_258.jpg "小程序参考")
+#### 第三方集成
+因为是无后端，集成了一下第三方
+1.  淘宝：采用好单库的api，自己上阿里妈妈申请淘客，然后到好单库授权，即可使用相关api；
+2.  外卖：饿了么+美团借鉴 [https://github.com/zwpro/coupons](https://github.com/zwpro/coupons "https://github.com/zwpro/coupons")
+3.  [Bmob 后端云](https://www.bmob.cn/ "Bmob 后端云")，因小程序禁止使用淘口令，为了骗取审核通过，需要用到动态数据；其次外卖跳转地址和appid可利用比目动态设置；详细参考代码。
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+**淘宝API**
+- [申请淘客](https://pub.alimama.com/ "申请淘客")（如有请忽略）
+- 注册[好单库](https://www.haodanku.com/ "好单库")账号，并授权淘宝。相关文档好单库官网有，按照官网操作即可。
 
-#### 参与贡献
+**美团cps**
+- [申请美团联盟](https://union.meituan.com/ "申请美团联盟")，目前只有企业资质才能注册，如果没有，可关注美团官方公众号《美团福利宝》《美团美天赚》获取自己的推广链接
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+**饿了么cps**
+- 注册了淘宝联盟之后，可下载App淘宝联盟，banner有饿了么的推广链接；或登陆[淘宝联盟](https://pub.alimama.com "淘宝联盟")获取
+
+**小程序内获取推广链接**
+- 因饿了么和美团可分享的东西很多，可参考该文章获取path和小程序id。
 
 
-#### 码云特技
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 感谢
+
+- zwpro大佬uniapp版的外卖CPS小程序给的灵感
