@@ -1,6 +1,6 @@
 //app.js
 const Bmob = require("utils/Bmob-2.2.2.min.js");
-Bmob.initialize("", "");
+Bmob.initialize("", "");//填写比目后端云的配置
 App({
   onLaunch: function () {
     // 获取小程序更新机制兼容
