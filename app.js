@@ -1,8 +1,6 @@
 //app.js
 const Bmob = require("utils/Bmob-2.2.2.min.js");
-Bmob.initialize("c2fb78e5ff7397cb", "245920");
-const CLIENT_ID = "a4f3d873da4c4a7ab1fa42ec7e8c599b";
-const CLIENT_SECRET = "f80ee2baba32dc6c4d32719005361af025c82834";
+Bmob.initialize("", "");
 App({
   onLaunch: function () {
     // 获取小程序更新机制兼容
@@ -41,8 +39,8 @@ App({
     }
   },
   globalData: {
-    CLIENT_ID: "a4f3d873da4c4a7ab1fa42ec7e8c599b",
-    CLIENT_SECRET: "f80ee2baba32dc6c4d32719005361af025c82834",
+    CLIENT_ID: "",//拼多多clientid
+    CLIENT_SECRET: "",//拼多多clientsecret
     PDD_PID:"14204449_184631258" ,
     GOOD_SEARCH: "pdd.ddk.goods.search",//搜索api
     GOOD_URL: "pdd.ddk.goods.promotion.url.generate",//链接转换api
