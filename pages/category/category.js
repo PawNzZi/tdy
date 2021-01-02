@@ -1,6 +1,5 @@
 // pages/category/category.js
 const network = require("../../utils/network.js")
-const ADZONE = 109118100473
 
 Page({
 
@@ -146,7 +145,7 @@ Page({
     var data = {
     }
     var min_id = this.data.min_id;
-    network.requestGet("/column/apikey/royfwmeng/type/1/back/10/min_id/" + min_id + "/cid/" + key, {
+    network.requestGet("/column/apikey/{{你的apikey}}/type/1/back/10/min_id/" + min_id + "/cid/" + key, {
       success(res) {
         if(res.code == 0){
           let array = that.data.array.concat(res.data);
