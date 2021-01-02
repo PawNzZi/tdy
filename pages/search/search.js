@@ -112,7 +112,7 @@ Page({
     var data = {
     }
     let min_id = this.data.min_id ;
-    network.requestGet("/supersearch/apikey/royfwmeng/keyword/" + key + "/back/10/min_id/" + min_id + "/sort/2",{
+    network.requestGet("/supersearch/apikey/{{你的apikey}}/keyword/" + key + "/back/10/min_id/" + min_id + "/sort/2",{
       success(res){
         let array = that.data.array.concat(res.data);
         that.setData({
