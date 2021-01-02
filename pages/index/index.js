@@ -83,7 +83,7 @@ Page({
   everyday:function(){
     let that = this ;
     var data = {};
-    network.requestGet('/column/apikey/royfwmeng/type/1/back/20/min_id/1',{
+    network.requestGet('/column/apikey/{{你的apikey}}/type/1/back/20/min_id/1',{
       success(res){
         that.setData({
           array:res.data
@@ -98,7 +98,7 @@ Page({
     let that = this ;
     var data = {};
     let sh_min_id = this.data.sh_min_id;
-    network.requestGet("/get_keyword_items/apikey/royfwmeng/keyword/" + "抽纸" + "/back/5/min_id/" + sh_min_id, {
+    network.requestGet("/get_keyword_items/apikey/{{你的apikey}}/keyword/" + "抽纸" + "/back/5/min_id/" + sh_min_id, {
       success(res) {
         console.log(res)
         let array = res.data;
@@ -117,7 +117,7 @@ Page({
     let that = this;
     var data = {};
     let hot_min_id = this.data.hot_min_id ;
-    network.requestGet('/low_price_Pinkage_data/apikey/royfwmeng/type/1/min_id/' + hot_min_id, {
+    network.requestGet('/low_price_Pinkage_data/apikey/{{你的apikey}}/type/1/min_id/' + hot_min_id, {
       success(res) {
         console.log("getHotGoods")
         console.log(res)
@@ -136,7 +136,7 @@ Page({
   getBannerGoods: function () {
     let that = this;
     var data = {};
-    network.requestGet('/column/apikey/royfwmeng/type/11/back/5/min_id/1', {
+    network.requestGet('/column/apikey/{{你的apikey}}/type/11/back/5/min_id/1', {
       success(res) {
         console.log(res)
         that.setData({
