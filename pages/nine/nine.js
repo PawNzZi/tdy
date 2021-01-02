@@ -121,7 +121,7 @@ Page({
     var data = {
     }
     var min_id = this.data.min_id ;
-    network.requestGet('/column/apikey/royfwmeng/type/2/back/10/min_id/' + min_id,{
+    network.requestGet('/column/apikey/{{你的apikey}}/type/2/back/10/min_id/' + min_id,{
       success(res){
         if (res.code == 0) {
           let nArray = that.data.array.concat(res.data);
@@ -157,7 +157,7 @@ Page({
       // size: 30
     }
     var min_id = this.data.min_id;
-    network.requestPost('/column/apikey/royfwmeng/type/3/back/10/min_id/' + min_id, {
+    network.requestPost('/column/apikey/{{你的apikey}}/type/3/back/10/min_id/' + min_id, {
       success(res) {
         let nArray = that.data.nArray.concat(res.data);
         
