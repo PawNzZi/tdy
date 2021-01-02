@@ -1,6 +1,3 @@
-/**index.wxss**/
-/* pages/search/search.wxss */
-
 .swiper-view{
   display: flex;
   flex-direction: row;
@@ -12,20 +9,17 @@
 }
 .swiper{
   width: 100%;
-  height: 300rpx;
-  background: #ff9900;
-  border-radius: 15rpx;
+  height: 400rpx;
 }
 .search-input{
   width: 100%;
-  /* height: 110rpx; */
-  padding: 0 30rpx;
+  height: 110rpx;
+  padding: 25rpx 30rpx;
   display: flex;
   flex-direction: row;
   box-sizing: border-box;
   align-items: center;
-  /* background: #ff9900; */
-  justify-content: center;
+  background: #fff;
 }
 .contains{
   display: flex;
@@ -46,13 +40,13 @@
   width: 80%;
   height: 70rpx;
 }
-/* .top-view{
+.top-view{
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
   
-} */
+} 
 .kongbai-view{
   width: 100%;
   height: 110rpx;
@@ -60,13 +54,12 @@
 .slide-image{
   width: 100%;
   height: 400rpx;
-  border-radius: 15rpx;
 }
 
 .hot-search{
   display: flex;
   flex-direction: column;
-  margin-top: 80rpx;
+  margin-top: 30rpx;
 }
 .right-enter{
   display: inline-flex;

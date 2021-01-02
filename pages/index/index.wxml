@@ -1,15 +1,15 @@
 <!--index.wxml-->
 <view>
 	
-		<view class="search-input">
-			<view class="contains">
-				<i-icon i-class="icon-search" type="search" size='22' color='#80848f' />
-				<input class="input" placeholder="搜索" placeholder-style="color:#80848f" confirm-type="search" bindconfirm="searchGoods" bindinput='getInputText'></input>
-			</view>
-
-	</view>
+ <view class="top-view">
+      <view class="search-input">
+  <view class="contains">
+    <i-icon i-class="icon-search" type="search" size='22' color='#80848f'/>
+    <input class="input" placeholder="搜索" placeholder-style="color:#80848f" confirm-type="search" bindconfirm="searchGoods" bindinput='getInputText'></input>
+  </view>   
+</view>
+  </view>
 	<view class="kongbai-view"></view>
-	<!-- <view class="swiper-view"> -->
 	<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="#ff9900">
 		<block wx:for="{{bannerLists}}">
 			<swiper-item>
@@ -17,7 +17,6 @@
 			</swiper-item>
 		</block>
 	</swiper>
-	<!-- </view> -->
 
 	<!-- 热搜 -->
 	<view class="hot-search">
@@ -35,7 +34,7 @@
 			</view>
 		</view>
 	</view>
-	<!-- 女装 -->
+	<!-- 生活必备 -->
 	<view class="hot-search">
 		<view class="right-enter">
 			<text class="hot-title">生活必备</text>
@@ -54,29 +53,8 @@
 	<view class="divider">
 		<i-divider color="#e9eaec" lineColor="#e9eaec">今日上新</i-divider>
 	</view>
-
+		<!-- 今日上新 -->
 	<view wx:for="{{array}}" bindtap='toGoodsDetail' data-itemid='{{item.itemid}}'>
 		<component-item title="{{item.itemtitle}}" url="{{item.itempic}}" type="{{item.activity_type}}" couponprice="{{item.couponmoney}}" sales="{{item.itemsale}}" price="{{item.itemendprice}}" oldprice="{{item.itemprice}}"></component-item>
 	</view>
-	<!-- <block wx:for="{{array}}">
-  <view class="item-view" bindtap='toGoodsDetail'>
-      <image class="item-img" src='https://images.unsplash.com/photo-1551446591-142875a901a1?w=640'></image>
-      <view class="item-right">
-          <view class="item-right-top-top">
-            <i-tag class="i-tags" color="red">天猫</i-tag>
-            <text class="item-title-text">{{item.title}}</text>
-          </view>
-          <view class="item-right-top-middle">
-            <i-tag  type="border" color="yellow">券 10</i-tag>
-            <text class="item-sales">已售 100000件</text>
-          </view>
-          <view class="item-right-top">
-            <text class="item-price-text">券后价：</text>
-            <text class="item-price">19.80</text>
-            <text class="item-oldprice">19.80</text>
-          </view>
-      </view>
-  </view>
-  </block> -->
-
 </view>
